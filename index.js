@@ -9,11 +9,11 @@ mongoose
 
     app.get("/", async (req, res) => {
     	const posts = await news.find()
-      text = "";
+      web_content = "";
       for (var i = 0; i < posts.length; i++) {
-        text += "<h3>"+""+posts[i].title+""+"</h3>"+"<p>"+""+posts[i].content+"</p><br>";
+        web_content += "<h3>"+""+posts[i].title+""+"</h3>"+"<p>"+""+posts[i].content+"</p><br>";
       }
-    	res.send(text)
+    	res.send(web_content)
     })
 
 		app.listen(5000, () => {
